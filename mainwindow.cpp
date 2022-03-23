@@ -34,9 +34,9 @@ void MainWindow::findCars()
     ui->textBrowser->clear();
     for (const auto &c: cars)
         if(ui->editSearch->text().isEmpty())
-         ui->textBrowser->append(QString::number(c.n)+ ", "+QString::fromStdString(std::string(c.model))+", "+ QString::number(c.year));
+         ui->textBrowser->append(QString::number(c.n)+ ", "+QString::fromStdString(std::string(c.model))+", "+QString::number(c.color)+", "+ QString::number(c.year));
         else if(c.model==ui->editSearch->text().toStdString())
-        ui->textBrowser->append(QString::number(c.n)+ ", "+QString::fromStdString(std::string(c.model))+", "+ QString::number(c.year));
+        ui->textBrowser->append(QString::number(c.n)+ ", "+QString::fromStdString(std::string(c.model))+", "+QString::number(c.color)+", "+ QString::number(c.year));
 }
 
 void MainWindow::addCars()
