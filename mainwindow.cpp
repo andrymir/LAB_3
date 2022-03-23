@@ -24,7 +24,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
-    writer csv("lessons_add.csv");
+    writer csv("cars_add.csv");
     csv.WriteAll(cars);
     delete ui;
 }
